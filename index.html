@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRO 人力资源管理系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                HRO<span class="logo-red">Talent</span>
+            </div>
+            <nav class="nav">
+                <a href="#dashboard" class="nav-item active">仪表盘</a>
+                <a href="#recruitment" class="nav-item">招聘管理</a>
+                <a href="#positions" class="nav-item">职位管理</a>
+                <a href="#candidates" class="nav-item">候选人管理</a>
+                <a href="#settings" class="nav-item">系统设置</a>
+            </nav>
+            <div class="user-info">
+                <span class="user-role">HR</span>
+                <div class="avatar">HR</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="main container">
+        <!-- 欢迎卡片 -->
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">欢迎使用 HRO 人力资源管理系统</h1>
+                <button class="btn btn-primary">发布新职位</button>
+            </div>
+            <p>该系统用于管理集团公司的招聘流程，包括职位发布、简历筛选、面试安排和录用审批等功能。</p>
+        </div>
+
+        <!-- 统计卡片 -->
+        <div class="grid">
+            <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">开放职位</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">86</div>
+                <div class="stat-label">收到简历</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24</div>
+                <div class="stat-label">面试中</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">待审批</div>
+            </div>
+        </div>
+
+        <!-- 招聘流程步骤 -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">招聘流程</h2>
+            </div>
+            <div class="steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">发布职位</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">简历筛选</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">预约初试</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">1面评估</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-label">2面评估</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-label">审批录用</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 职位管理 -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">职位管理</h2>
+                <button class="btn btn-primary">创建职位</button>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="搜索职位...">
+            </div>
+            <div class="filter">
+                <div class="filter-item">
+                    <label class="filter-label">BU</label>
+                    <select class="form-select">
+                        <option value="all">全部</option>
+                        <option value="bu1">BU1</option>
+                        <option value="bu2">BU2</option>
+                        <option value="bu3">BU3</option>
+                        <option value="bu4">BU4</option>
+                        <option value="bu5">BU5</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label class="filter-label">状态</label>
+                    <select class="form-select">
+                        <option value="all">全部</option>
+                        <option value="open">开放</option>
+                        <option value="closed">关闭</option>
+                        <option value="draft">草稿</option>
+                    </select>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>职位名称</th>
+                        <th>所属BU</th>
+                        <th>招聘人数</th>
+                        <th>发布日期</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>前端开发工程师</td>
+                        <td>BU1</td>
+                        <td>2</td>
+                        <td>2026-04-15</td>
+                        <td><span class="tag tag-processing">开放</span></td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                            <button class="btn btn-secondary">编辑</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>后端开发工程师</td>
+                        <td>BU2</td>
+                        <td>3</td>
+                        <td>2026-04-10</td>
+                        <td><span class="tag tag-processing">开放</span></td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                            <button class="btn btn-secondary">编辑</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>产品经理</td>
+                        <td>BU3</td>
+                        <td>1</td>
+                        <td>2026-04-05</td>
+                        <td><span class="tag tag-processing">开放</span></td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                            <button class="btn btn-secondary">编辑</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>人力资源专员</td>
+                        <td>HR</td>
+                        <td>1</td>
+                        <td>2026-04-01</td>
+                        <td><span class="tag tag-completed">关闭</span></td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                            <button class="btn btn-secondary">编辑</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <div class="pagination-item">上一页</div>
+                <div class="pagination-item active">1</div>
+                <div class="pagination-item">2</div>
+                <div class="pagination-item">3</div>
+                <div class="pagination-item">下一页</div>
+            </div>
+        </div>
+
+        <!-- 候选人管理 -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">候选人管理</h2>
+                <button class="btn btn-primary">导入简历</button>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="搜索候选人...">
+            </div>
+            <div class="filter">
+                <div class="filter-item">
+                    <label class="filter-label">职位</label>
+                    <select class="form-select">
+                        <option value="all">全部</option>
+                        <option value="frontend">前端开发工程师</option>
+                        <option value="backend">后端开发工程师</option>
+                        <option value="pm">产品经理</option>
+                        <option value="hr">人力资源专员</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label class="filter-label">状态</label>
+                    <select class="form-select">
+                        <option value="all">全部</option>
+                        <option value="pending">待筛选</option>
+                        <option value="interview">面试中</option>
+                        <option value="offer">待录用</option>
+                        <option value="rejected">已拒绝</option>
+                    </select>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>应聘职位</th>
+                        <th>简历评分</th>
+                        <th>当前状态</th>
+                        <th>申请日期</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>张三</td>
+                        <td>前端开发工程师</td>
+                        <td>
+                            <div class="rating">
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="far fa-star rating-star"></i>
+                            </div>
+                        </td>
+                        <td><span class="tag tag-processing">面试中</span></td>
+                        <td>2026-04-18</td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                            <button class="btn btn-primary">安排面试</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>李四</td>
+                        <td>后端开发工程师</td>
+                        <td>
+                            <div class="rating">
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="far fa-star rating-star"></i>
+                                <i class="far fa-star rating-star"></i>
+                            </div>
+                        </td>
+                        <td><span class="tag tag-pending">待筛选</span></td>
+                        <td>2026-04-17</td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                            <button class="btn btn-primary">筛选</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>王五</td>
+                        <td>产品经理</td>
+                        <td>
+                            <div class="rating">
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                            </div>
+                        </td>
+                        <td><span class="tag tag-completed">待录用</span></td>
+                        <td>2026-04-16</td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                            <button class="btn btn-primary">审批</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>赵六</td>
+                        <td>前端开发工程师</td>
+                        <td>
+                            <div class="rating">
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="fas fa-star rating-star"></i>
+                                <i class="far fa-star rating-star"></i>
+                                <i class="far fa-star rating-star"></i>
+                                <i class="far fa-star rating-star"></i>
+                            </div>
+                        </td>
+                        <td><span class="tag tag-rejected">已拒绝</span></td>
+                        <td>2026-04-15</td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <div class="pagination-item">上一页</div>
+                <div class="pagination-item active">1</div>
+                <div class="pagination-item">2</div>
+                <div class="pagination-item">3</div>
+                <div class="pagination-item">下一页</div>
+            </div>
+        </div>
+
+        <!-- 面试安排 -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">面试安排</h2>
+                <button class="btn btn-primary">新建面试</button>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="搜索面试...">
+            </div>
+            <div class="filter">
+                <div class="filter-item">
+                    <label class="filter-label">日期</label>
+                    <input type="date" class="form-input" value="2026-04-21">
+                </div>
+                <div class="filter-item">
+                    <label class="filter-label">面试官</label>
+                    <select class="form-select">
+                        <option value="all">全部</option>
+                        <option value="interviewer1">面试官1</option>
+                        <option value="interviewer2">面试官2</option>
+                        <option value="interviewer3">面试官3</option>
+                    </select>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>候选人</th>
+                        <th>应聘职位</th>
+                        <th>面试时间</th>
+                        <th>面试官</th>
+                        <th>面试轮次</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>张三</td>
+                        <td>前端开发工程师</td>
+                        <td>2026-04-21 10:00</td>
+                        <td>面试官1</td>
+                        <td>初试</td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                            <button class="btn btn-secondary">修改</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>王五</td>
+                        <td>产品经理</td>
+                        <td>2026-04-21 14:00</td>
+                        <td>面试官2</td>
+                        <td>复试</td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                            <button class="btn btn-secondary">修改</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>孙七</td>
+                        <td>后端开发工程师</td>
+                        <td>2026-04-22 09:30</td>
+                        <td>面试官3</td>
+                        <td>初试</td>
+                        <td>
+                            <button class="btn btn-outline">查看</button>
+                            <button class="btn btn-secondary">修改</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 审批流程 -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">审批流程</h2>
+            </div>
+            <div class="card-list">
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <div class="list-item-title">录用审批 - 王五</div>
+                        <span class="tag tag-pending">待审批</span>
+                    </div>
+                    <div class="list-item-meta">应聘职位：产品经理 | 申请日期：2026-04-16</div>
+                    <div style="margin-top: 12px;">
+                        <button class="btn btn-primary" style="margin-right: 8px;">同意</button>
+                        <button class="btn btn-secondary">拒绝</button>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <div class="list-item-title">录用审批 - 张三</div>
+                        <span class="tag tag-processing">审批中</span>
+                    </div>
+                    <div class="list-item-meta">应聘职位：前端开发工程师 | 申请日期：2026-04-18</div>
+                    <div style="margin-top: 12px;">
+                        <button class="btn btn-outline">查看进度</button>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <div class="list-item-title">职位审批 - 高级后端工程师</div>
+                        <span class="tag tag-pending">待审批</span>
+                    </div>
+                    <div class="list-item-meta">所属BU：BU2 | 申请日期：2026-04-20</div>
+                    <div style="margin-top: 12px;">
+                        <button class="btn btn-primary" style="margin-right: 8px;">同意</button>
+                        <button class="btn btn-secondary">拒绝</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 职位发布模态框 -->
+    <div class="modal" id="createPositionModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">发布新职位</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label class="form-label">职位名称</label>
+                    <input type="text" class="form-input" placeholder="请输入职位名称">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">所属BU</label>
+                    <select class="form-select">
+                        <option value="bu1">BU1</option>
+                        <option value="bu2">BU2</option>
+                        <option value="bu3">BU3</option>
+                        <option value="bu4">BU4</option>
+                        <option value="bu5">BU5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">招聘人数</label>
+                    <input type="number" class="form-input" placeholder="请输入招聘人数">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">职位描述</label>
+                    <textarea class="form-textarea" placeholder="请输入职位描述"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">任职要求</label>
+                    <textarea class="form-textarea" placeholder="请输入任职要求"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">薪资范围</label>
+                    <div style="display: flex; gap: 8px;">
+                        <input type="number" class="form-input" placeholder="最低薪资">
+                        <span>-</span>
+                        <input type="number" class="form-input" placeholder="最高薪资">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">取消</button>
+                    <button type="submit" class="btn btn-primary">发布</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 面试安排模态框 -->
+    <div class="modal" id="scheduleInterviewModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">安排面试</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label class="form-label">候选人</label>
+                    <input type="text" class="form-input" value="张三" disabled>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">应聘职位</label>
+                    <input type="text" class="form-input" value="前端开发工程师" disabled>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">面试轮次</label>
+                    <select class="form-select">
+                        <option value="first">初试</option>
+                        <option value="second">复试</option>
+                        <option value="final">终试</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">面试日期</label>
+                    <input type="date" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">面试时间</label>
+                    <div class="time-picker">
+                        <input type="time" class="time-input">
+                        <span>至</span>
+                        <input type="time" class="time-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">面试官</label>
+                    <select class="form-select">
+                        <option value="interviewer1">面试官1</option>
+                        <option value="interviewer2">面试官2</option>
+                        <option value="interviewer3">面试官3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">面试地点</label>
+                    <input type="text" class="form-input" placeholder="请输入面试地点">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">备注</label>
+                    <textarea class="form-textarea" placeholder="请输入备注信息"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">取消</button>
+                    <button type="submit" class="btn btn-primary">确认安排</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 模态框控制
+        document.addEventListener('DOMContentLoaded', function() {
+            // 职位发布按钮
+            const createPositionBtn = document.querySelector('.btn-primary');
+            const createPositionModal = document.getElementById('createPositionModal');
+            const closeBtns = document.querySelectorAll('.modal-close');
+            
+            createPositionBtn.addEventListener('click', function() {
+                createPositionModal.style.display = 'flex';
+            });
+            
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+            
+            // 点击模态框外部关闭
+            window.addEventListener('click', function(e) {
+                if (e.target.classList.contains('modal')) {
+                    e.target.style.display = 'none';
+                }
+            });
+            
+            // 安排面试按钮
+            const scheduleInterviewBtns = document.querySelectorAll('button:contains("安排面试")');
+            const scheduleInterviewModal = document.getElementById('scheduleInterviewModal');
+            
+            scheduleInterviewBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    scheduleInterviewModal.style.display = 'flex';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
